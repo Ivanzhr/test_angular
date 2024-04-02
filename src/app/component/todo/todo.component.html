@@ -1,0 +1,10 @@
+<div class="todo__items">
+    <div class="todo__item" *ngFor="let obj of todoArr">
+        <div class="name">{{ obj.name }}</div>
+        <div class="priority">{{ obj.priority }}</div>
+        <div class="description">{{ obj.description }}</div>
+        <div class="date_done">{{ obj.date_done }}</div>
+        <button (click) = 'deleteItem(obj.id)'>Видалити нотатку</button>
+        <button (click) = 'editItem(obj.id)'>Редягувати</button>
+    </div>
+</div>
