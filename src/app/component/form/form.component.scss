@@ -1,0 +1,78 @@
+.wrepper__form {
+    width: 80%;
+    margin: 20px auto;
+
+    .form {
+
+        form {
+            display: flex;
+            justify-content: center;
+
+            button {
+                background-color: #AFD198;
+                border-radius: 0 5px 5px 0;
+
+                &:hover {
+                    background-color: #9CAFAA;
+                }
+            }
+
+            input:nth-child(1) {
+                border-radius: 5px 0 0 5px;
+            }
+
+            .description {
+                flex-grow: 2;
+            }
+
+            input:nth-child(1),
+            input:nth-child(2),
+            select,
+            input:nth-child(4) {
+                border-right: 1px solid #000;
+            }
+        }
+    }
+
+    .search__view{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        .search {
+            form {
+                input,
+                select{
+                    border-right: 1px solid #000;
+                }
+                .input__value {
+                    border-radius: 5px 0 0 5px;
+                }
+                button {
+                    border-radius: 0 5px 5px 0;
+                    background-color: #AFD198;
+                }
+            }
+        }
+
+        .veiw__date{
+            .view_days, .view_priority{
+                border-radius: 5px;
+            }
+            span {
+                display: inline-block;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+button,
+input,
+select {
+    padding: 5px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #E8EFCF;
+    color: #6a6a6a;
+}

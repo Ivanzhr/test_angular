@@ -1,0 +1,41 @@
+.todo__items {
+    width: 80%;
+    margin: 20px auto;
+    .todo__item{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        border-radius: 5px;
+        background-color: #ffe2bc;
+        div {
+            width: calc(100% / 5);
+            padding: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .bnt {
+            display: flex;
+            justify-content: flex-end;
+            button {
+                padding: 5px;
+                margin: 5px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:nth-child(1){
+                background-color: #e4b68b;
+                &:hover {
+                    background-color: #ffd3aa;
+                }
+            }
+
+            button:nth-child(2){
+                background-color: #ECCA9C;
+                &:hover {
+                    background-color: #ffd3aa;
+                }
+            }
+        }
+    }
+}

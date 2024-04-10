@@ -1,7 +1,49 @@
-<div class="form">
-    <input type="text" [(ngModel)]="obj.name" name="obj.name">
-    <input type="text" [(ngModel)]="obj.priority" name="obj.priority">
-    <input type="text" [(ngModel)]="obj.description" name="obj.description">
-    <input type="text" [(ngModel)]="obj.date_done" name="obj.date_done">
-    <button (click) = "addTodo()">Додати</button>
+<div class="wrepper__form">
+    <div class="form">
+        <form>
+            <input type="text" [(ngModel)]="obj.name" name="obj.name" placeholder="Назва">
+            <input type="text" [(ngModel)]="obj.description" name="obj.description" placeholder="Нотатка"
+                class="description">
+            <select name="obj.priority" [(ngModel)]="obj.priority">
+                <option value="низький">Низький</option>
+                <option value="середній">Середній</option>
+                <option value="високий">Високий</option>
+                <option value="терміново">Терімново</option>
+            </select>
+            <input type="date" [(ngModel)]="obj.date_done" name="obj.date_done">
+            <button *ngIf="checkingForBtn; else editButton" (click)="addTodo()">Додати</button>
+            <ng-template #editButton>
+                <button (click)="changeTodoItem()">Змінити</button>
+            </ng-template>
+        </form>
+    </div>
+    <div class="search__view">
+        <div class="search">
+            <form>
+                <input type="text" class="input__value" name="inputValue" [(ngModel)]="inputValue" placeholder="Пошук">
+                <select class="select__value" name="selectValue" [(ngModel)]="selectValue">
+                    <option value="name" selected>Назва</option>
+                    <option value="priority">Приоритет</option>
+                    <option value="description">Опис</option>
+                    <option value="date_done">Дата виконання</option>
+                </select>
+                <button (click)="search()">Пошук</button>
+            </form>
+        </div>
+        <div class="veiw__date">
+            <span>Список справ на :</span>
+            <select name="selectedTimetValue" class="view_days" [(ngModel)]="selectedTimetValue"(change)="selectTimeForView()">
+                <option value="all" selected>Увесь час</option>
+                <option value="day">День</option>
+                <option value="week">Тиждень</option>
+                <option value="mounth">Місяць</option>
+            </select>
+            <span>Сортувати за :</span>
+            <select name="sortValue" class="view_priority" [(ngModel)]="sortValue" (change)="sort()">
+                <option value="none" selected>Звичайне</option>
+                <option value="priority">Пріоритетом</option>
+                <option value="date_done">Датою</option>
+            </select>
+        </div>
+    </div>
 </div>
