@@ -39,3 +39,15 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px){
+    .todo__items{
+        .todo__item {
+            flex-direction: column;
+            div {
+                width: 100%;
+            }
+        }
+    }
+    
+}

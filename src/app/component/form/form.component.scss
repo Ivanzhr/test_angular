@@ -13,7 +13,7 @@
                 border-radius: 0 5px 5px 0;
 
                 &:hover {
-                    background-color: #9CAFAA;
+                    background-color: #adec83;
                 }
             }
 
@@ -50,11 +50,15 @@
                 button {
                     border-radius: 0 5px 5px 0;
                     background-color: #AFD198;
+                    &:hover {
+                        background-color: #adec83;
+                    }
                 }
             }
         }
 
         .veiw__date{
+            display: flex;
             .view_days, .view_priority{
                 border-radius: 5px;
             }
@@ -75,4 +79,48 @@ select {
     cursor: pointer;
     background-color: #E8EFCF;
     color: #6a6a6a;
+}
+
+@media screen and (max-width: 1340px){
+    .form form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input, select {
+            border-right:none
+        }
+    }
+    .search__view {
+        flex-direction: column;
+        .search form {
+            input{
+                width: calc(100% / 2);
+            }
+            select, button {
+                width: calc(50% / 2);
+            }
+        }
+    }
+
+    .veiw__date {
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 720px){
+    .veiw__date {
+        flex-direction: column;
+        gap: 20px;
+        div {
+            width: 100%;
+            display:flex;
+            justify-content: end;
+            align-items: center;
+        }
+    }
 }

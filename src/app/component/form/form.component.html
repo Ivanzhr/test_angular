@@ -31,19 +31,23 @@
             </form>
         </div>
         <div class="veiw__date">
-            <span>Список справ на :</span>
-            <select name="selectedTimetValue" class="view_days" [(ngModel)]="selectedTimetValue"(change)="selectTimeForView()">
-                <option value="all" selected>Увесь час</option>
-                <option value="day">День</option>
-                <option value="week">Тиждень</option>
-                <option value="mounth">Місяць</option>
-            </select>
-            <span>Сортувати за :</span>
-            <select name="sortValue" class="view_priority" [(ngModel)]="sortValue" (change)="sort()">
-                <option value="none" selected>Звичайне</option>
-                <option value="priority">Пріоритетом</option>
-                <option value="date_done">Датою</option>
-            </select>
+            <div class="list">
+                <span>Список справ на :</span>
+                <select name="selectedTimetValue" class="view_days" [(ngModel)]="selectedTimetValue"(change)="selectTimeForView()">
+                    <option value="all" selected>Увесь час</option>
+                    <option value="day">День</option>
+                    <option value="week">Тиждень</option>
+                    <option value="mounth">Місяць</option>
+                </select>
+            </div>
+            <div class="sort">
+                <span>Сортувати за :</span>
+                <select name="sortValue" class="view_priority" [(ngModel)]="sortValue" (change)="sort()">
+                    <option value="none" selected>Звичайне</option>
+                    <option value="priority">Пріоритетом</option>
+                    <option value="date_done">Датою</option>
+                </select>
+            </div>
         </div>
     </div>
 </div>
